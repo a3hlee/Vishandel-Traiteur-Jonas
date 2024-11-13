@@ -1,0 +1,77 @@
+ mat-divider {
+    margin: 1.25em 0;  /* Use em for margins */
+  }
+  
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.25em;
+  }
+  
+  .responsive-image {
+    width: 45%;
+    height: auto;
+    border-radius: 0.5em;
+    margin-bottom: 1.25em;
+  }
+
+  #foodstore-info img {
+    width: 35%;
+  }
+
+  #foodstore-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .text-content {
+    width: 60%;
+    max-width: 50%;
+    margin: 0 1.25em;
+    text-align: left;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 48em) {  /* 768px / 16px = 48em */
+    .content-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.25em;  /* Use em for padding */
+    }
+  
+    .responsive-image {
+      width: 100%;
+      margin-bottom: 1.25em;  /* Use em for margin */
+    }
+  
+    .text-content {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 1.25em 0;  /* Use em for margin */
+      text-align: center;  /* Center align text on small screens */
+    }
+  }
+  
+  @media (max-width: 50.625em) {  /* 810px / 16px = 50.625em */
+    .content-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.25em;  /* Use em for padding */
+    }
+  
+    .responsive-image {
+      width: 100%;
+      margin-bottom: 1.25em;  /* Use em for margin */
+    }
+  
+    .text-content {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 1.25em 0;  /* Use em for margin */
+      text-align: center;  /* Center align text on small screens */
+    }
+  }
+  

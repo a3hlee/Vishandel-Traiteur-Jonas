@@ -1,0 +1,46 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$Foodstore-Gwenny-primary-palette: map-merge(mat.$blue-palette, (501: #428bca, 201: #7baeda, 701: #296292, 601: #428bca, contrast: (501: #ffffff, 201: #dae8f4, 701: #131e28, )));
+$Foodstore-Gwenny-primary: mat.define-palette($Foodstore-Gwenny-primary-palette,
+        $default: 501,
+        $lighter: 201,
+        $darker: 701,
+        $text: 601);
+
+$Foodstore-Gwenny-accent-palette: map-merge(mat.$light-blue-palette, (501: #e2e4f6, 201: #f3f4fb, 701: #2d3790, 601: #9aa1e0, contrast: (501: #9aa1e0, 201: #f9fafd, 701: #161b48, )));
+$Foodstore-Gwenny-accent: mat.define-palette($Foodstore-Gwenny-accent-palette,
+        $default: 501,
+        $lighter: 201,
+        $darker: 701,
+        $text: 601);
+
+// The warn palette is optional (defaults to red).
+$Foodstore-Gwenny-warn-palette: map-merge(mat.$yellow-palette, (501: #eecf6d, 201: #f8ecc5, 701: #7c620e, 601: #e7bb2f, contrast: (501: #ffffff, 201: #fcf8e9, 701: #3e3107, )));
+$Foodstore-Gwenny-warn: mat.define-palette($Foodstore-Gwenny-warn-palette,
+        $default: 501,
+        $lighter: 201,
+        $darker: 701,
+        $text: 601);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$Foodstore-Gwenny-theme: mat.define-light-theme((color: (primary: $Foodstore-Gwenny-primary,
+                accent: $Foodstore-Gwenny-accent,
+                warn: $Foodstore-Gwenny-warn,
+            )));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($Foodstore-Gwenny-theme);

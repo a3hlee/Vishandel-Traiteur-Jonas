@@ -1,0 +1,52 @@
+mat-card {
+  margin: 1.25em;
+  padding: 1.25em;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info img {
+  max-width: 10em;
+}
+
+img {
+  height: 5em;
+  width: auto;
+  padding-right: 1em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.4em 0em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #e1e1e1;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 48em) {
+  /* 768px / 16px = 48em */
+
+}

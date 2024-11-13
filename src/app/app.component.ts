@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,  } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test-site';
+
+  isLoading = true;
+
+  ngOnInit(): void {
+    // Simulate a delay for loading (e.g., fetching data or assets)
+    setTimeout(() => {
+      this.isLoading = false; // Stop showing the spinner once loading is complete
+    }, 1000); // Adjust the timeout as needed
+  }
 }
