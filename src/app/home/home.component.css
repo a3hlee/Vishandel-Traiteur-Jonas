@@ -17,6 +17,10 @@
     margin-bottom: 1.25em;
   }
 
+  img {
+    box-shadow: 1em 1em 0.8em 0.3em #e1e1e1;
+  }
+
   #foodstore-info img {
     width: 35%;
   }
@@ -34,44 +38,43 @@
     text-align: left;
   }
   
-  /* Responsive styles for smaller screens */
-  @media (max-width: 48em) {  /* 768px / 16px = 48em */
+  @media (max-width: 48em) {
     .content-wrapper {
       flex-direction: column;
       align-items: flex-start;
-      padding: 1.25em;  /* Use em for padding */
+      padding: 1.25em;
     }
   
     .responsive-image {
       width: 100%;
-      margin-bottom: 1.25em;  /* Use em for margin */
+      margin-bottom: 1.25em;
     }
   
     .text-content {
       width: 100%;
       max-width: 100%;
-      margin: 0 0 1.25em 0;  /* Use em for margin */
-      text-align: center;  /* Center align text on small screens */
+      margin: 0 0 1.25em 0;
+      text-align: center;
     }
   }
   
-  @media (max-width: 50.625em) {  /* 810px / 16px = 50.625em */
+  @media (max-width: 50.625em) {
     .content-wrapper {
       flex-direction: column;
       align-items: flex-start;
-      padding: 1.25em;  /* Use em for padding */
+      padding: 1.25em;
     }
   
     .responsive-image {
       width: 100%;
-      margin-bottom: 1.25em;  /* Use em for margin */
+      margin-bottom: 1.25em;
     }
   
     .text-content {
       width: 100%;
       max-width: 100%;
-      margin: 0 0 1.25em 0;  /* Use em for margin */
-      text-align: center;  /* Center align text on small screens */
+      margin: 0 0 1.25em 0;
+      text-align: center;
     }
   }
   

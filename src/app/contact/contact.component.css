@@ -27,6 +27,11 @@ img {
   padding-right: 1em;
 }
 
+.facebook-logo {
+  height: 3em;
+  width: auto;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -45,8 +50,19 @@ a:hover {
   color: #e1e1e1;
 }
 
-/* Add responsiveness for smaller screens */
 @media (max-width: 48em) {
-  /* 768px / 16px = 48em */
+  .info-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 
+  .info {
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+  }
+
+  img {
+    height: 4em;
+  }
 }
