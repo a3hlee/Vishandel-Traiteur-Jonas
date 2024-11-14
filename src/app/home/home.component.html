@@ -1,23 +1,34 @@
-<div class="content-wrapper">
-    <img loading="eager" priority class="responsive-image" [src]="imageSrc" [alt]="imageAlt">
-    <div class="text-content">
-        <h2>Welkom bij Vishandel-Traiteur Jonas</h2>
-        <p>Sinds jaren staat <strong>Vishandel - Traiteur Jonas</strong> garant als leverancier van uw verse vis
-            voor zowel uw
-            persoonlijke maaltijden als uw feestgelegenheden (communies, doopfeesten, enz.).</p>
-        <p>Wij zorgen dagelijks voor een uitgebreid assortiment verse vis, schaal en schelpdieren, in huis
-            bereide dagschotels,
-            salades, visdelicatessen, droogvis en gerookte vis.</p>
-        <p>Ook kun je bij ons terecht voor aperitiefhapjes, zeevruchtenschotels, koude schotels, peuzelschotels
-            en warme
-            bereidingen. </p>
-        <p>Wij staan steeds klaar om u te begeleiden in uw keuze en garanderen een persoonlijke en professionele
-            aanpak!</p>
+<mat-card>
+    <div class="content-wrapper">
+        <img id="jonas-img" [src]="imageSrc" [alt]="imageAlt">
+        <div class="text-content">
+            <h2>Welkom bij Vishandel-Traiteur Jonas</h2>
+            <p>Sinds jaren staat <strong>Vishandel - Traiteur Jonas</strong> garant als leverancier van uw verse vis
+                voor zowel uw
+                persoonlijke maaltijden als uw feestgelegenheden (communies, doopfeesten, enz.).</p>
+            <p>Wij zorgen dagelijks voor een uitgebreid assortiment verse vis, schaal en schelpdieren, in huis
+                bereide dagschotels,
+                salades, visdelicatessen, droogvis en gerookte vis.</p>
+            <p>Ook kun je bij ons terecht voor aperitiefhapjes, zeevruchtenschotels, koude schotels, peuzelschotels
+                en warme
+                bereidingen. </p>
+            <p>Wij staan steeds klaar om u te begeleiden in uw keuze en garanderen een persoonlijke en professionele
+                aanpak!</p>
+        </div>
     </div>
-</div>
-<mat-divider></mat-divider>
-<div id="foodstore-info">
-    <h2>Nieuw! Foodstore Gwenny</h2>
-    <p>Vanaf nu kunt u ook terecht in onze foodstore. Elke dag open van 6u tot 22u.</p>
-    <img rel="preload" src="assets/FOODSTORE-tips.jpg" alt="Foodstore Advertisement">
-</div>
+</mat-card>
+
+<!-- <mat-divider></mat-divider> -->
+<mat-card>
+    <div class="content-wrapper">
+        <div class="text-content">
+            <h2>Nieuw! Foodstore Gwenny</h2>
+            <p>Vanaf nu kunt u ook terecht in onze foodstore. Elke dag open van 6u tot 22u.</p>
+            <p>Op regelmatige basis zorgen we voor variatie in het assortiment.</p>
+            <p>In ons assortiment heb je dagschotels met vis of vlees, gekoelde dranken, soep en snoep.</p>
+            <p>De schotels worden altijd geleverd door Vishandel-Traiteur Jonas uit Koekelare.</p>
+        </div>
+
+        <img id="foodstore-img" src="assets/foodstore-machines.jpg" alt="Foodstore Advertisement">
+    </div>
+</mat-card>
