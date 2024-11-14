@@ -1,22 +1,15 @@
 mat-toolbar {
     display: flex;
-    flex-direction: column;  /* Stack the children vertically */
-    height: auto;  /* Adjust height as needed */
-    padding: 1rem;  /* Optional padding for spacing */
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
 }
 
 .header {
     background-color: transparent;
     display: flex;
-    flex-direction: column;  /* Stack items vertically inside the header */
-    align-items: center; /* Center everything horizontally */
-}
-
-.title-container {
-    display: flex;  /* Horizontal layout for image and title */
-    align-items: center;  /* Center image and text vertically */
-    justify-content: center;  /* Center them horizontally */
-    margin-bottom: 1rem;  /* Optional space between title and links */
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
@@ -25,27 +18,29 @@ mat-toolbar {
     font-weight: bold;
     padding-left: 1em;
     display: flex;
-    flex-direction: row;  /* Stack the links vertically */
-    align-items: center;  /* Center the links horizontally */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
 }
 
 #nav-image {
     height: auto;
-    width: 10%;  /* Adjust size of logo */
-    margin-right: 0.5em;  /* Space between logo and title */
+    width: 10%;
+    margin-right: 0.5em;
 }
 
 #link {
     display: flex;
-    flex-direction: row;  /* Stack the links vertically */
-    align-items: center;  /* Center the links horizontally */
+    flex-direction: row;
+    align-items: center;
 }
 
 a {
     text-decoration: none;
     font-weight: bold;
     font-size: large;
-    margin: 0.5em 0;  /* Vertical spacing between links */
+    margin: 0.5em 0;
     color: #428bca;
 }
 
