@@ -7,22 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HorecaComponent {
   images = [
-    { src: 'assets/jonas-front.jpg', alt: 'Image 1 Description' },
-    { src: 'assets/foodstore.png', alt: 'Image 2 Description' },
-    { src: 'assets/placeholder.jpg', alt: 'Image 3 Description' },
+    { src: 'assets/vispannetjes.jpg', alt: 'Vispan' },
+    { src: 'assets/vispannetjes-saus.jpg', alt: 'Vispan met saus' },
+    { src: 'assets/garnaalkroket-1.jpg', alt: 'Garnaalkroket' },
   ];
   currentImageIndex = 0;
-
-  // showNextImage() {
-  //   // Using modular arithmetic to loop to the beginning after the last image
-  //   this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
-  // }
-
-  // showPreviousImage() {
-  //   // Modular arithmetic to loop to the end if we go below 0
-  //   this.currentImageIndex =
-  //     (this.currentImageIndex - 1 + this.images.length) % this.images.length;
-  // }
 
   showNextImage() {
     // If we're at the last image, reset to the first image

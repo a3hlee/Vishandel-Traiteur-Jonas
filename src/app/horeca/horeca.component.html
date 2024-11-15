@@ -1,17 +1,22 @@
-<mat-card appearance="outlined">
-    <div class="image-container">
-        <img *ngIf="images[currentImageIndex]" class="image" [src]="images[currentImageIndex].src"
-            [alt]="images[currentImageIndex].alt" />
+<div class="image-container">
+    <img *ngIf="images[currentImageIndex]" class="image" [src]="images[currentImageIndex].src"
+        [alt]="images[currentImageIndex].alt" />
+    <p>{{ images[currentImageIndex].alt }}</p>
 
-        <div class="button-container">
-            <button mat-raised-button color="primary" (click)="showPreviousImage()">
-                Previous
-            </button>
-            <button mat-raised-button color="primary" (click)="showNextImage()">
-                Next
-            </button>
-        </div>
+    <div>
+        <button mat-icon-button (click)="showPreviousImage()">
+            <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+        <span class="image-index">
+            {{ currentImageIndex + 1 }} of {{ images.length }}
+        </span>
+        <button mat-icon-button (click)="showNextImage()">
+            <mat-icon>arrow_forward_ios</mat-icon>
+        </button>
     </div>
+</div>
+
+<mat-card appearance="outlined">
     <!-- <img mat-card-image src="assets/jonas-front.jpg" alt="Voorkant Vishandel-Traiteur Jonas"> -->
     <mat-card-header>
         <mat-card-title>Voor de Horeca</mat-card-title>

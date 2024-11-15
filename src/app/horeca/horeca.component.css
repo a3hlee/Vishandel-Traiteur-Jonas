@@ -24,14 +24,14 @@ mat-divider {
     color: #e1e1e1 !important;
 }
 
-/* img {
-    height: auto;
-    margin-bottom: 1.25em;
-} */
+.image-index {
+    font-size: 1.25em;
+    margin: 0 1em;
+}
 
-mat-card img {
-    max-width: 100%;
+img {
     height: 30em;
+    box-shadow: 1em 1em 0.8em #e1e1e1;
 }
 
 mat-card {
@@ -80,5 +80,3 @@ mat-card {
         align-items: stretch;
     }
 }
-
-@media (max-width: 50.625em) {}
