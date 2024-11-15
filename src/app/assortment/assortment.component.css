@@ -9,6 +9,10 @@ mat-card {
     box-shadow: 1em 1em 0.8em #e1e1e1;
 }
 
+mat-card-title {
+    font-size: 1.7em !important;
+}
+
 .cards {
     display: flex;
     flex-flow: row wrap;
