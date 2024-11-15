@@ -1,10 +1,18 @@
-<h2>Ons assortiment</h2>
-<p>Voor prijzen zie prijslijst: <a>Download</a></p>
+<h1>Ons assortiment</h1>
+<p>Voor prijzen zie prijslijst (enkel prijslijst feestdagen beschikbaar tot januari):
+  <a mat-button href="assets/Feestdagen-2024-2025.pdf" download>
+    Download
+    <mat-icon aria-hidden="false" fontIcon="download"></mat-icon>
+  </a>
+</p>
 <div class="cards">
   <mat-card *ngFor="let product of products">
-    <img mat-card-image [src]="product.image" alt="{{ product.name }}">
+    <img mat-card-image 
+         [src]="product.image" 
+         alt="{{ product.name }}"
+         (error)="onImageError($event)" />
     <mat-card-header>
-      <mat-card-title><strong>{{ product.name }}</strong></mat-card-title>
+      <mat-card-title>{{ product.name }}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <p><i>{{ product.description }}</i></p>

@@ -1,13 +1,82 @@
-h1,
-h2 {
-    color: #3f51b5;
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    transition: opacity 0.5s ease;
+    /* Optional fade effect */
+}
+
+button {
+    margin-top: 0.2em;
+    margin-right: 0.3em;
 }
 
 .product-list ul {
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 1.25em;
 }
 
 mat-divider {
-    margin: 15px 0;
+    margin: 1.25em;
+    color: #e1e1e1 !important;
+}
+
+.image-index {
+    font-size: 1.25em;
+    margin: 0 1em;
+}
+
+img {
+    height: 30em;
+    box-shadow: 1em 1em 0.8em #e1e1e1;
+}
+
+mat-card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border: 0.2em solid #e1e1e1 !important;
+    border-radius: 0.5em !important;
+    box-shadow: 1em 1em 0.8em #e1e1e1;
+}
+
+.vertical-divider {
+    height: auto;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.12);
+    align-self: stretch;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.25em;
+}
+
+@media (max-width: 48em) {
+    mat-card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        border: 0.2em solid #e1e1e1 !important;
+        border-radius: 0.5em !important;
+        box-shadow: 1em 1em 0.8em 0.3em #e1e1e1;
+    }
+
+    .vertical-divider {
+        width: 100%;
+        height: 1px;
+        margin: 1.25em 0;
+        align-self: center;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }

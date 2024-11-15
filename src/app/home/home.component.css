@@ -1,77 +1,90 @@
- mat-divider {
-    margin: 1.25em 0;  /* Use em for margins */
-  }
-  
+h1 {
+  margin: 0;
+  font-size: 2em !important;
+  font-weight: normal;
+}
+
+mat-divider {
+  margin: 1.25em 0;
+  /* Use em for margins */
+}
+
+mat-card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+  border: 0.2em solid #e1e1e1 !important;
+  border-radius: 0.5em !important;
+  box-shadow: 1em 1em 0.8em #e1e1e1;
+  /* padding: 2em; */
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* padding: 1.25em; */
+}
+
+img {
+  /* box-shadow: 1em 1em 0.8em 0.3em #e1e1e1; */
+  width: 45%;
+  height: auto;
+  /* margin-bottom: 1.25em; */
+}
+
+#foodstore-img {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+#jonas-img {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+.text-content {
+  width: 60%;
+  max-width: 50%;
+  margin: 0 1.25em;
+  text-align: left;
+}
+
+@media (max-width: 48em) {
   .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 1.25em;
   }
-  
+
   .responsive-image {
-    width: 45%;
-    height: auto;
-    border-radius: 0.5em;
+    width: 100%;
     margin-bottom: 1.25em;
   }
 
-  #foodstore-info img {
-    width: 35%;
+  .text-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1.25em 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 50.625em) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25em;
   }
 
-  #foodstore-info {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  .responsive-image {
+    width: 100%;
+    margin-bottom: 1.25em;
   }
-  
+
   .text-content {
-    width: 60%;
-    max-width: 50%;
-    margin: 0 1.25em;
-    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1.25em 0;
+    text-align: center;
   }
-  
-  /* Responsive styles for smaller screens */
-  @media (max-width: 48em) {  /* 768px / 16px = 48em */
-    .content-wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1.25em;  /* Use em for padding */
-    }
-  
-    .responsive-image {
-      width: 100%;
-      margin-bottom: 1.25em;  /* Use em for margin */
-    }
-  
-    .text-content {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 0 1.25em 0;  /* Use em for margin */
-      text-align: center;  /* Center align text on small screens */
-    }
-  }
-  
-  @media (max-width: 50.625em) {  /* 810px / 16px = 50.625em */
-    .content-wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1.25em;  /* Use em for padding */
-    }
-  
-    .responsive-image {
-      width: 100%;
-      margin-bottom: 1.25em;  /* Use em for margin */
-    }
-  
-    .text-content {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 0 1.25em 0;  /* Use em for margin */
-      text-align: center;  /* Center align text on small screens */
-    }
-  }
-  
+}

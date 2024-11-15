@@ -1,5 +1,16 @@
+h1 {
+    margin: 0;
+    font-size: 2em !important;
+    font-weight: normal;
+  }
+
 mat-card {
     width: 20%;
+    box-shadow: 1em 1em 0.8em #e1e1e1;
+}
+
+mat-card-title {
+    font-size: 1.7em !important;
 }
 
 .cards {
@@ -7,4 +18,10 @@ mat-card {
     flex-flow: row wrap;
     gap: 2em;
     justify-content: space-around;
+}
+
+.mat-mdc-button {
+    /* background-color: #428bca; */
+    color: #428bca;
+    font-weight: bold;
 }
