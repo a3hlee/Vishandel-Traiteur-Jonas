@@ -13,7 +13,7 @@ mat-toolbar {
 }
 
 .title {
-    color: #428bca;
+    /* color: #428bca; */
     font-size: xx-large;
     font-weight: bold;
     padding-left: 1em;
@@ -41,11 +41,23 @@ a {
     font-weight: bold;
     font-size: large;
     margin: 0.5em 0;
-    color: #428bca;
 }
 
 .mat-mdc-button:not(:disabled) {
     color: #428bca;
     font-weight: bold;
     font-size: large;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
 }
+
+.mat-mdc-button:hover {
+    color: black;
+    background-color: #f0f0f0;
+}
+
+.active-link {
+    color: black !important;
+    background-color: #f0f0f0;
+  }
+  
