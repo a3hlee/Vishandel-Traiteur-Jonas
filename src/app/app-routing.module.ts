@@ -4,6 +4,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { AssortmentComponent } from './assortment/assortment.component';
 import { HorecaComponent } from './horeca/horeca.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/startpagina', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'assortiment', component: AssortmentComponent },
   { path: '', redirectTo: '/horeca', pathMatch: 'full' },
   { path: 'horeca', component: HorecaComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

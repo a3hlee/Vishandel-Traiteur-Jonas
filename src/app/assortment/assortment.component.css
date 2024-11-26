@@ -2,7 +2,7 @@ h1 {
     margin: 0;
     font-size: 2em !important;
     font-weight: normal;
-  }
+}
 
 mat-card {
     width: 20%;
@@ -20,8 +20,39 @@ mat-card-title {
     justify-content: space-around;
 }
 
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #e1e1e1;
+}
+
+.carousel-nav.prev {
+    left: 10px;
+}
+
+.carousel-nav.next {
+    right: 10px;
+}
+
+.image-count {
+    margin: 0;
+    font-size: 1.2em;
+    color: #e1e1e1;
+}
+
 .mat-mdc-button {
-    /* background-color: #428bca; */
     color: #428bca;
     font-weight: bold;
 }
