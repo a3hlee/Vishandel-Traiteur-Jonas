@@ -140,11 +140,28 @@ export class AssortmentComponent {
     }
   }
 
+  // Show the next image in the carousel (modal version)
+showNextImageInModal() {
+  const product = this.products.find(p => p.images.includes(this.enlargedImage));
+  const currentIndex = product?.images.indexOf(this.enlargedImage) || 0;
+  const nextIndex = (currentIndex + 1) % (product?.images.length || 1);
+  this.enlargedImage = product?.images[nextIndex] || '';
+}
+
+// Show the previous image in the carousel (modal version)
+showPreviousImageInModal() {
+  const product = this.products.find(p => p.images.includes(this.enlargedImage));
+  const currentIndex = product?.images.indexOf(this.enlargedImage) || 0;
+  const prevIndex = (currentIndex - 1 + (product?.images.length || 1)) % (product?.images.length || 1);
+  this.enlargedImage = product?.images[prevIndex] || '';
+}
+
+
   // Enlarge the image on click
-  enlargeImage(imageUrl: string) {
-    this.enlargedImage = imageUrl;
+  enlargeImage(product: Product, index: number) {
+    this.enlargedImage = product.images[index];
     this.isModalOpen = true;
-  }
+  }  
 
   // Close the modal when clicked
   closeModal() {
