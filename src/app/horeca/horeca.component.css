@@ -1,14 +1,3 @@
-.image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.image {
-    transition: opacity 0.5s ease;
-    /* Optional fade effect */
-}
-
 button {
     margin-top: 0.2em;
     margin-right: 0.3em;
@@ -24,14 +13,9 @@ mat-divider {
     color: #e1e1e1 !important;
 }
 
-.image-index {
-    font-size: 1.25em;
-    margin: 0 1em;
-}
-
 img {
-    height: 30em;
-    box-shadow: 1em 1em 0.8em #e1e1e1;
+    max-height: 35em;
+    max-width: 100%;
 }
 
 mat-card {

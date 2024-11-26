@@ -167,4 +167,9 @@ showPreviousImageInModal() {
   closeModal() {
     this.isModalOpen = false;
   }
+
+  getModalImageCount(): number {
+    const product = this.products.find(p => p.images.includes(this.enlargedImage));
+    return product ? product.images.length : 0;
+  }  
 }
