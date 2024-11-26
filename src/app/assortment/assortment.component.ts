@@ -51,6 +51,12 @@ export class AssortmentComponent {
         'assets/assortment/41-2.jpg',
         'assets/assortment/41-3.jpg'],
       currentImageIndex: 0,
+      description: 'Vanaf 10 personen',
+    },
+    {
+      name: 'Vispannetje',
+      images: ['assets/assortment/vispannetje.jpg'],
+      currentImageIndex: 0,
       description: '',
     },
     {
@@ -72,20 +78,25 @@ export class AssortmentComponent {
       description: '',
     },
     {
-      name: 'Lepelhapjes',
+      name: 'Lepelhapjes/Receptie',
       images: ['assets/assortment/lepelhapjes.jpg', 'assets/assortment/lepelhapjes-1.jpg'],
       currentImageIndex: 0,
-      description: '',
+      description: 'Vanaf 10 personen',
     },
     {
       name: '“Surf en turf” aperoboot',
-      images: ['assets/assortment/surf-en-turf-aperoboot.jpg'],
+      images: ['assets/assortment/surf-en-turf-aperoboot.jpg', 
+        'assets/assortment/surf-en-turf-aperoboot-1.jpg', 
+        'assets/assortment/surf-en-turf-aperoboot-2.jpg'],
       currentImageIndex: 0,
       description: 'Surf en turf liggen apart op 2 boten',
     },
   ];
 
-  constructor() { }
+  isModalOpen: boolean = false;
+  enlargedImage: string = '';
+
+  constructor() {}
 
   ngOnInit() {
     this.preloadImages();
@@ -121,5 +132,16 @@ export class AssortmentComponent {
     } else {
       product.currentImageIndex--;
     }
+  }
+
+  // Enlarge the image on click
+  enlargeImage(imageUrl: string) {
+    this.enlargedImage = imageUrl;
+    this.isModalOpen = true;
+  }
+
+  // Close the modal when clicked
+  closeModal() {
+    this.isModalOpen = false;
   }
 }

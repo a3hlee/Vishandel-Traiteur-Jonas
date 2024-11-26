@@ -7,6 +7,7 @@
   </a>
 </p>
 <p>Alle gerechten dienen vanaf 2 personen besteld te worden, tenzij anders vermeld.</p>
+<p>Om de foto duidelijker te kunnen zien, kunt u erop klikken.</p>
 
 <!-- Cards with conditional carousel -->
 <div class="cards">
@@ -23,8 +24,9 @@
         <mat-icon>arrow_forward_ios</mat-icon>
       </button>
 
+      <!-- Add (click)="enlargeImage(product.images[product.currentImageIndex])" to enlarge the image -->
       <img class="image" [src]="product.images[product.currentImageIndex]" [alt]="product.name" loading="lazy"
-        (error)="onImageError($event)" />
+        (error)="onImageError($event)" (click)="enlargeImage(product.images[product.currentImageIndex])" />
 
       <!-- Image count displayed below the image -->
       <p class="image-count">
@@ -38,4 +40,9 @@
       <p><i>{{ product.description }}</i></p>
     </mat-card-content>
   </mat-card>
+</div>
+
+<!-- Modal for enlarged image -->
+<div [ngClass]="{'modal': true, 'open': isModalOpen}" (click)="closeModal()">
+  <img [src]="enlargedImage" alt="Enlarged Image" class="enlarged-image" (click)="$event.stopPropagation()" />
 </div>

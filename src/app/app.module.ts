@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { AssortmentComponent } from './assortment/assortment.component';
 import { HorecaComponent } from './horeca/horeca.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HorecaComponent } from './horeca/horeca.component';
     HeaderComponent,
     AssortmentComponent,
     HorecaComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

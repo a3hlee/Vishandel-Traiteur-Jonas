@@ -57,3 +57,32 @@ mat-card-title {
     color: #428bca;
     font-weight: bold;
 }
+
+
+
+/* Basic Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Default is hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal.open {
+    display: flex; /* Show when the 'open' class is added */
+  }
+  
+  .enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+  
+  
+  
