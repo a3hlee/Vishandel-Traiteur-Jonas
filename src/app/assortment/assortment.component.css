@@ -6,6 +6,8 @@ h1 {
 
 mat-card {
     width: 20%;
+    /* border: 0.2em solid #e1e1e1 !important; */
+    border-radius: 0.5em !important;
     box-shadow: 1em 1em 0.8em #e1e1e1;
 }
 
@@ -28,6 +30,7 @@ mat-card-title {
 .image {
     width: 100%;
     height: auto;
+    border-radius: 0.5em 0.5em 0 0 !important;
 }
 
 .carousel-nav {
