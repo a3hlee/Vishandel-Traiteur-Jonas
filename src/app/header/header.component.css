@@ -13,7 +13,6 @@ mat-toolbar {
 }
 
 .title {
-    /* color: #428bca; */
     font-size: xx-large;
     font-weight: bold;
     padding-left: 1em;
@@ -59,5 +58,19 @@ a {
 .active-link {
     color: black !important;
     background-color: #f0f0f0;
+  }
+
+  @media (max-width: 48em) {
+    .title {
+        font-size: x-large;
+    }
+
+    #link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
   }
   

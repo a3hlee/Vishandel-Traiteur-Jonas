@@ -39,6 +39,12 @@ export class AssortmentComponent {
       description: '',
     },
     {
+      name: 'Nr. 38 Delicatessenschotel',
+      images: ['assets/assortment/38.jpg'],
+      currentImageIndex: 0,
+      description: '',
+    },
+    {
       name: 'Nr. 40 Zeevruchtenschotel “Royal”',
       images: ['assets/assortment/40.jpg'],
       currentImageIndex: 0,
