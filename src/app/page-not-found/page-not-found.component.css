@@ -1,0 +1,15 @@
+.not-found-container {
+  text-align: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em !important;
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: 2rem;
+}
