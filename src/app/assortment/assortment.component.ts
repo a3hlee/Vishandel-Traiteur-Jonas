@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 interface Product {
   name: string;
@@ -18,53 +18,87 @@ export class AssortmentComponent {
       name: 'Nr. 31 Gevarieerde schotel vlees/vis',
       images: ['assets/assortment/31-1.jpg'],
       currentImageIndex: 0,
-      description: 'vanaf 2 pers',
+      description: '',
     },
     {
       name: 'Nr. 32 Royale schotel vlees/vis',
       images: ['assets/assortment/32-2.jpg', 'assets/assortment/32.jpg'],
       currentImageIndex: 0,
-      description: 'altijd 2 plateaus & vanaf 2 pers',
+      description: 'Vlees en vis liggen op aparte plateaus.',
     },
     {
       name: 'Nr. 34 Gevarieerde visschotel',
       images: ['assets/assortment/34-1.jpg', 'assets/assortment/34.jpg'],
       currentImageIndex: 0,
-      description: 'vanaf 2 pers',
+      description: '',
     },
     {
-      name: 'Nr. 36 Gevarieerde visschotel "Jonas"',
+      name: 'Nr. 36 Gevarieerde visschotel ”Jonas”',
       images: ['assets/assortment/36.jpg'],
       currentImageIndex: 0,
-      description: 'vanaf 2 pers',
+      description: '',
+    },
+    {
+      name: 'Nr. 40 Zeevruchtenschotel “Royal”',
+      images: ['assets/assortment/40.jpg'],
+      currentImageIndex: 0,
+      description: 'Met Halve kreeft',
     },
     {
       name: 'Nr. 41 Koud buffet',
-      images: ['assets/assortment/41.jpg'],
+      images: ['assets/assortment/41.jpg',
+        'assets/assortment/41-1.jpg',
+        'assets/assortment/41-2.jpg',
+        'assets/assortment/41-3.jpg'],
       currentImageIndex: 0,
-      description: 'vanaf 2 pers',
+      description: '',
+    },
+    {
+      name: 'Tapas/Peuzelschotel',
+      images: ['assets/assortment/tapas-peuzelschotel.jpg'],
+      currentImageIndex: 0,
+      description: 'Vanaf 3 personen',
+    },
+    {
+      name: 'Tapas/Peuzelschotel “De Luxe”',
+      images: ['assets/assortment/tapas-peuzelschotel-de-luxe.jpg'],
+      currentImageIndex: 0,
+      description: 'Vanaf 3 personen',
     },
     {
       name: 'Houten Plankje',
       images: ['assets/assortment/houten-plankje-1.jpg', 'assets/assortment/houten-plankje.jpg'],
       currentImageIndex: 0,
-      description: 'vanaf 2 pers',
+      description: '',
     },
     {
       name: 'Lepelhapjes',
       images: ['assets/assortment/lepelhapjes.jpg', 'assets/assortment/lepelhapjes-1.jpg'],
       currentImageIndex: 0,
-      description: 'vanaf 2 pers',
+      description: '',
     },
     {
-      name: 'Lepelhapjes',
-      images: ['assets/assortment/lepelhapje.jpg'],
+      name: '“Surf en turf” aperoboot',
+      images: ['assets/assortment/surf-en-turf-aperoboot.jpg'],
       currentImageIndex: 0,
-      description: 'vanaf 2 pers',
+      description: 'Surf en turf liggen apart op 2 boten',
     },
   ];
 
-  constructor() {}
+  constructor() { }
+
+  ngOnInit() {
+    this.preloadImages();
+  }
+
+  preloadImages() {
+    this.products.forEach(product => {
+      product.images.forEach(imageSrc => {
+        const img = new Image();
+        img.src = imageSrc;
+      });
+    });
+  }
 
   // Handle image load errors and set to a placeholder
   onImageError(event: any) {
