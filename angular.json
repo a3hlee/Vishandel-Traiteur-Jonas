@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-site": {
+    "Vishandel-Traiteur-Jonas": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test-site",
+            "outputPath": "dist/Vishandel-Traiteur-Jonas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "test-site:build:production"
+              "buildTarget": "Vishandel-Traiteur-Jonas:build:production"
             },
             "development": {
-              "buildTarget": "test-site:build:development"
+              "buildTarget": "Vishandel-Traiteur-Jonas:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "test-site:build"
+            "buildTarget": "Vishandel-Traiteur-Jonas:build"
           }
         },
         "test": {
