@@ -54,7 +54,7 @@
     <button mat-icon-button *ngIf="getModalImageCount() > 1" class="carousel-nav-modal prev" (click)="showPreviousImageInModal()">
       <mat-icon>arrow_back_ios</mat-icon>
     </button>
-    <img [src]="enlargedImage" alt="Enlarged Image" class="enlarged-image" />
+    <img loading="lazy" [src]="enlargedImage" alt="Enlarged Image" class="enlarged-image" />
     <button mat-icon-button *ngIf="getModalImageCount() > 1" class="carousel-nav-modal next" (click)="showNextImageInModal()">
       <mat-icon>arrow_forward_ios</mat-icon>
     </button>
