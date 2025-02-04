@@ -33,10 +33,6 @@ mat-card-title {
     border-radius: 0.5em 0.5em 0 0 !important;
 }
 
-img.enlarged-image {
-    width: 40em;
-}
-
 .carousel-nav {
     position: absolute;
     top: 50%;
@@ -82,12 +78,10 @@ img.enlarged-image {
 
 .modal.open {
     display: flex;
-    /* Show when the 'open' class is added */
 }
 
-.enlarged-image {
-    width: 40%;
-    object-fit: contain;
+img.enlarged-image {
+    width: 100%;
 }
 
 .modal-content {
@@ -95,6 +89,7 @@ img.enlarged-image {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 33%;
 }
 
 .carousel-nav-modal {
@@ -103,11 +98,11 @@ img.enlarged-image {
 }
 
 .carousel-nav-modal.prev {
-    left: -1em;
+    left: -0.5em;
 }
 
 .carousel-nav-modal.next {
-    right: -1em;
+    right: -0.5em;
 }
 
 /* Close button */
@@ -136,7 +131,20 @@ img.enlarged-image {
         align-items: center;
     }
 
-    .enlarged-image {
-        width: 80%;
+    img.enlarged-image {
+        width: 20em;
+    }
+
+    .close-btn {
+        top: -2.5em;
+        right: -4em;
+    }
+
+    .carousel-nav-modal.prev {
+        left: 1em;
+    }
+    
+    .carousel-nav-modal.next {
+        right: 1em;
     }
 }

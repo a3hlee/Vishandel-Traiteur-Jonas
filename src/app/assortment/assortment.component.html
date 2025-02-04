@@ -48,6 +48,9 @@
     <button mat-icon-button class="close-btn" (click)="closeModal()">
       <mat-icon>close</mat-icon>
     </button>
+    <button mat-icon-button disabled *ngIf="getModalImageCount() == 1">
+      <mat-icon></mat-icon>
+    </button>
     <button mat-icon-button *ngIf="getModalImageCount() > 1" class="carousel-nav-modal prev" (click)="showPreviousImageInModal()">
       <mat-icon>arrow_back_ios</mat-icon>
     </button>
