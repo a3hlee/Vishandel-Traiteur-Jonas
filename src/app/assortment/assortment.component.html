@@ -1,7 +1,7 @@
 <h1>Ons assortiment</h1>
 <p>
-  Voor prijzen zie prijslijst <strong>(enkel prijslijst feestdagen beschikbaar tot januari)</strong>:
-  <a mat-button href="assets/Feestdagen-2024-2025.pdf" target="_blank">
+  Voor prijzen zie prijslijst:
+  <a mat-button href="assets/Prijslijst.pdf" target="_blank">
     Bekijk
     <mat-icon aria-hidden="false">visibility</mat-icon>
   </a>
@@ -48,12 +48,18 @@
     <button mat-icon-button class="close-btn" (click)="closeModal()">
       <mat-icon>close</mat-icon>
     </button>
+    <button mat-icon-button disabled *ngIf="getModalImageCount() == 1">
+      <mat-icon></mat-icon>
+    </button>
     <button mat-icon-button *ngIf="getModalImageCount() > 1" class="carousel-nav-modal prev" (click)="showPreviousImageInModal()">
       <mat-icon>arrow_back_ios</mat-icon>
     </button>
-    <img [src]="enlargedImage" alt="Enlarged Image" class="enlarged-image" />
+    <img loading="lazy" [src]="enlargedImage" alt="Enlarged Image" class="enlarged-image" />
     <button mat-icon-button *ngIf="getModalImageCount() > 1" class="carousel-nav-modal next" (click)="showNextImageInModal()">
       <mat-icon>arrow_forward_ios</mat-icon>
+    </button>
+    <button mat-icon-button disabled *ngIf="getModalImageCount() == 1">
+      <mat-icon></mat-icon>
     </button>
   </div>
 </div>

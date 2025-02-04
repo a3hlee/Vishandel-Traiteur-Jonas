@@ -1,8 +1,22 @@
 .not-found-container {
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Aligns items vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
   text-align: center;
   padding: 2rem;
   font-family: Arial, sans-serif;
+  background-image: url("/assets/empty-water.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin: 1rem auto;
+  max-width: 70em;
+  height: 30em;
 }
+
 
 h1 {
   margin: 0;
@@ -12,4 +26,20 @@ h1 {
 
 p {
   margin-bottom: 2rem;
+  font-size: 1.2em;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.625em 1.25em;
+  background: #428bca;
+  color: #e1e1e1;
+  border-radius: 0.3125em;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btn:hover {
+  color: #428bca;
+  background-color: #e1e1e1;
 }
