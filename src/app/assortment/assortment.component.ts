@@ -27,7 +27,7 @@ export class AssortmentComponent {
       description: 'Vlees en vis liggen op aparte plateaus.',
     },
     {
-      name: 'Nr. 34 Gevarieerde visschotel',
+      name: 'Nr. 34 Gevarieerde visschotel gerookt',
       images: ['assets/assortment/34-1.jpg', 'assets/assortment/34.jpg'],
       currentImageIndex: 0,
       description: '',
@@ -42,16 +42,16 @@ export class AssortmentComponent {
       name: 'Nr. 38 Delicatessenschotel',
       images: ['assets/assortment/38.jpg'],
       currentImageIndex: 0,
-      description: '',
+      description: 'Met halve baby kreeft',
     },
     {
       name: 'Nr. 40 Zeevruchtenschotel “Royal”',
       images: ['assets/assortment/40.jpg'],
       currentImageIndex: 0,
-      description: 'Met Halve kreeft',
+      description: 'Met halve baby kreeft',
     },
     {
-      name: 'Nr. 41 Koud buffet',
+      name: 'Nr. 41 Koud buffet vis/vlees',
       images: ['assets/assortment/41.jpg',
         'assets/assortment/41-1.jpg',
         'assets/assortment/41-2.jpg',
