@@ -60,6 +60,10 @@ section p {
 }
 
 @media (max-width: 48em) {
+  #page-info {
+    margin: 0 0.5em;
+  }
+  
   .info-container {
     grid-template-columns: 1fr;
     gap: 10px;

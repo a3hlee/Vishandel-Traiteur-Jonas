@@ -46,10 +46,11 @@ mat-card {
     mat-card {
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        width: 100%;
         border: 0.2em solid #e1e1e1 !important;
         border-radius: 0.5em !important;
         box-shadow: 1em 1em 0.8em 0.3em #e1e1e1;
+        /* margin: 1.25em; */
     }
 
     .vertical-divider {

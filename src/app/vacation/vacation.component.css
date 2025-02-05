@@ -14,3 +14,14 @@ mat-card {
     justify-content: center;
     flex-direction: column;
 }
+
+@media (max-width: 48em) {
+    mat-card {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        padding: 0 5%;
+        text-align: center;
+    }
+  }

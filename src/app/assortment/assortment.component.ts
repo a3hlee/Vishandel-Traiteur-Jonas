@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product, PRODUCTS } from '../../assets/assortment/products'
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-assortment',
@@ -8,14 +9,31 @@ import { Product, PRODUCTS } from '../../assets/assortment/products'
 })
 export class AssortmentComponent implements OnInit {
   products: Product[] = PRODUCTS;
+  pdfFiles: string[] = [];
 
   isModalOpen: boolean = false;
   enlargedImage: string = '';
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.loadPdfFiles();
     this.preloadImages();
+  }
+
+  loadPdfFiles() {
+    this.http.get<string[]>('http://localhost:3000/api/pdf-list').subscribe(files => {
+      this.pdfFiles = files;
+    });
+  }
+
+  formatFileName(pdf: string): string {
+    return pdf
+      .replace('.pdf', '') // Remove .pdf
+      .replace(/-/g, ' ') // Replace - with space
+      .split(' ') // Split into words
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter
+      .join(' '); // Join words back
   }
 
   preloadImages() {
