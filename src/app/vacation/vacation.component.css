@@ -1,0 +1,19 @@
+mat-card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 3em;
+    /* border: 0.2em solid #e1e1e1 !important; */
+    border: 0.2em solid red !important;
+    border-radius: 0.5em !important;
+    /* box-shadow: 1em 1em 0.8em #e1e1e1; */
+    box-shadow: 0.5em 0.5em 0.8em red;
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
