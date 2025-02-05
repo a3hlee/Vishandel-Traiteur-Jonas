@@ -1,9 +1,3 @@
-/* h1 {
-  margin: 0;
-  font-size: 2em !important;
-  font-weight: normal;
-} */
-
 .info-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -49,6 +43,20 @@ a {
 
 a:hover {
   color: #e1e1e1;
+}
+
+#dots {
+  list-style-type: disc; 
+  margin-left: 1.2em;
+  margin-top: 0 !important;
+}
+
+.items {
+  padding: 0;
+}
+
+section p {
+  margin: 0.5em 0;
 }
 
 @media (max-width: 48em) {
