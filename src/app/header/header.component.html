@@ -6,11 +6,7 @@
 
   <div id="link">
     <a mat-button routerLink="/startpagina" routerLinkActive="active-link">Startpagina</a>
-    <div *ngFor="let pdf of pdfFiles">
-      <a mat-button [href]="'assets/pdf/' + pdf" target="_blank">
-        {{ formatFileName(pdf) }}
-      </a>
-    </div>
+    <a mat-button href="assets/pdf/Prijslijst.pdf" target="_blank">Prijslijst</a>
     <a mat-button routerLink="/assortiment" routerLinkActive="active-link">Assortiment</a>
     <a mat-button routerLink="/horeca" routerLinkActive="active-link">Horeca</a>
     <a mat-button routerLink="/contact" routerLinkActive="active-link">Contact</a>

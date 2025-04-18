@@ -8,6 +8,12 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
     {
+        name: 'NIEUW!!! Tapas charcuterieschotel',
+        images: ['assets/assortment/tapas-charcuterieschotel.jpg'],
+        currentImageIndex: 0,
+        description: '',
+    },
+    {
         name: 'Nr. 31 Gevarieerde schotel vlees/vis',
         images: ['assets/assortment/31-1.jpg'],
         currentImageIndex: 0,

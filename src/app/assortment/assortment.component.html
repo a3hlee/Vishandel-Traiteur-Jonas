@@ -2,13 +2,11 @@
   <h1>Een deel van ons assortiment</h1>
   <p>
     Voor prijzen en andere schotels zie prijslijst:
-  </p>
-  <div *ngFor="let pdf of pdfFiles">
-    <a mat-button [href]="'assets/pdf/' + pdf" target="_blank">
-      Bekijk {{ formatFileName(pdf) }}
+    <a mat-button href="assets/pdf/Prijslijst.pdf" target="_blank">
+      Bekijk prijslijst
       <mat-icon aria-hidden="false">visibility</mat-icon>
     </a>
-  </div>
+  </p>
   <p>Alle gerechten dienen vanaf 2 personen besteld te worden, tenzij anders vermeld.</p>
   <p>Om de foto duidelijker te kunnen zien, kunt u erop klikken.</p>
 
