@@ -88,7 +88,7 @@ export const PRODUCTS: Product[] = [
         name: 'Lepelhapjes/Receptie',
         images: ['assets/assortment/lepelhapjes.jpg', 'assets/assortment/lepelhapjes-1.jpg'],
         currentImageIndex: 0,
-        description: 'Vanaf 10 personen',
+        description: '',
     },
     {
         name: '“Surf en turf” aperoboot',
