@@ -3,6 +3,7 @@
 html,
 body {
     height: 100%;
+    color: #011526
 }
 
 body {
@@ -12,4 +13,8 @@ body {
 
 mat-card-title {
     font-size: 2em !important;
+}
+
+.content {
+    padding: 1em 16em 0em 16em;
 }

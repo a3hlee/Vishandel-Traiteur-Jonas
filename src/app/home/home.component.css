@@ -43,10 +43,122 @@ img {
 }
 
 .text-content {
-  width: 60%;
+  width: 45%;
   max-width: 50%;
-  margin: 0 1.25em;
+  padding: 0 1.25em;
   text-align: left;
+}
+
+#homepage-title{
+  color: #e5eaf5;
+  z-index: 999;
+  position: relative;
+}
+
+.homepageCta{
+  display: flex;
+  background-color: #D8E6F2;
+  position: relative;
+  z-index: 100;
+}
+
+
+.ctaBanner{
+  width: 100%;
+  height: 50vh;
+  min-height: 200px;;
+  max-height: 300px;
+  transition: width .5s;
+  background-position: bottom;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  color: white;
+  padding: 0px;
+  text-shadow: 0px 1px 1px #011526;
+}
+
+.ctaBanner h5 {
+  font-size: larger;
+  margin-bottom: 8px;
+  margin-top: 12px;
+}
+
+.ctaBanner:hover{
+  /* width: calc(100% + 300px); */
+  width: 150%;
+}
+
+.ctaBanner a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon-text-section-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-text-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+
+}
+.icon-container img{
+  max-height: 300px;
+  width: 70%;
+}
+
+.icon-text {
+  text-align: justify;
+}
+
+.v-border{
+  min-width: 15px;  
+  margin-right: 15px;
+  padding: 40px;
+}
+
+.container {
+  max-width: 1200px;  /* Beperkt de breedte op grotere schermen */
+  margin: 0 auto;  /* Centreert de container */
+  padding: 16px;  /* Voegt ruimte rond de inhoud toe */
+  width: 100%;  /* Zorgt ervoor dat de container altijd de volledige breedte gebruikt */
+  box-sizing: border-box;  /* Voorkomt dat padding de breedte vergroot */
+}
+
+.intro-container{
+  color: #464646; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center;
+}
+
+.intro-container h1{
+  width: 80%; 
+  align-self: center; 
+  text-align: left;
+}
+
+.row-to-col{
+  display: flex; justify-content: space-between;
+}
+
+/* Responsieve aanpassingen voor kleinere schermen */
+@media (max-width: 768px) {
+  .container {
+      padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 8px;
+  }
 }
 
 @media (max-width: 48em) {
@@ -72,5 +184,24 @@ img {
   #jonas-img {
     border-radius: 0.5em;
     width: 100%;
+  }
+
+  .homepageCta{
+    flex-direction: column;
+  }
+  .v-border{
+    display: none;
+  }
+
+  .intro-container{
+    flex-direction: column-reverse;
+  }
+  .intro-container h1{
+    width: 100%; 
+    align-self: center; 
+    text-align: center;
+  }
+  .row-to-col{
+    flex-direction: column;
   }
 }

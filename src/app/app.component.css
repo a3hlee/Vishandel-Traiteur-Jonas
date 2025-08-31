@@ -19,9 +19,6 @@
     background-color: transparent;
 }
 
-.content {
-    padding: 1em 5em 0em 5em;
-}
 
 @media (max-width: 599px) {
     .content {
