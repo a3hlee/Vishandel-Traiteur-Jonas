@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularMaterialModule } from './angular-material-module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { AssortmentComponent } from './assortment/assortment.component';
 import { HorecaComponent } from './horeca/horeca.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { VacationComponent } from "./vacation/vacation.component";
 
 @NgModule({
   declarations: [
@@ -21,13 +23,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AssortmentComponent,
     HorecaComponent,
     PageNotFoundComponent,
+    VacationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
-  ],
+    AngularMaterialModule,
+    HttpClientModule 
+],
   providers: [],
   bootstrap: [AppComponent]
 })

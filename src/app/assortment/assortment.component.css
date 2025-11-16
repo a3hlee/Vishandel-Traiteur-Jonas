@@ -117,6 +117,10 @@ img.enlarged-image {
 }
 
 @media (max-width: 48em) {
+    #page-info {
+        margin: 0 0.5em;
+    }
+
     mat-card {
         width: 90%;
         /* border: 0.2em solid #e1e1e1 !important; */

@@ -1,65 +1,70 @@
-<h1>Ons assortiment</h1>
-<p>
-  Voor prijzen zie prijslijst:
-  <a mat-button href="assets/Prijslijst.pdf" target="_blank">
-    Bekijk
-    <mat-icon aria-hidden="false">visibility</mat-icon>
-  </a>
-</p>
-<p>Alle gerechten dienen vanaf 2 personen besteld te worden, tenzij anders vermeld.</p>
-<p>Om de foto duidelijker te kunnen zien, kunt u erop klikken.</p>
+<div id="page-info">
+  <h1>Een deel van ons assortiment</h1>
+  <p>
+    Voor prijzen en andere schotels zie prijslijst:
+    <a mat-button href="assets/pdf/Feestdagen-2025-2026.pdf" target="_blank">
+      Bekijk prijslijst feestdagen 
+      <mat-icon aria-hidden="false">visibility</mat-icon>
+    </a>
+  </p>
+  <p>Alle gerechten dienen vanaf 2 personen besteld te worden, tenzij anders vermeld.</p>
+  <p>Om de foto duidelijker te kunnen zien, kunt u erop klikken.</p>
 
-<!-- Cards with conditional carousel -->
-<div class="cards">
-  <mat-card *ngFor="let product of products">
-    <div class="image-container">
-      <!-- Carousel navigation buttons on top -->
-      <button *ngIf="product.images.length > 1" mat-icon-button class="carousel-nav prev"
-        (click)="showPreviousImage(product)">
+  <!-- Cards with conditional carousel -->
+  <div class="cards">
+    <mat-card *ngFor="let product of products">
+      <div class="image-container">
+        <!-- Carousel navigation buttons on top -->
+        <button *ngIf="product.images.length > 1" mat-icon-button class="carousel-nav prev"
+          (click)="showPreviousImage(product)">
+          <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+
+        <button *ngIf="product.images.length > 1" mat-icon-button class="carousel-nav next"
+          (click)="showNextImage(product)">
+          <mat-icon>arrow_forward_ios</mat-icon>
+        </button>
+
+        <!-- Add (click)="enlargeImage(product.images[product.currentImageIndex])" to enlarge the image -->
+        <img class="image" [src]="product.images[product.currentImageIndex]" [alt]="product.name" loading="lazy"
+          (error)="onImageError($event)" (click)="enlargeImage(product, product.currentImageIndex)" />
+
+        <!-- Image count displayed below the image -->
+        <p class="image-count">
+          {{ product.currentImageIndex + 1 }} van {{ product.images.length }}
+        </p>
+      </div>
+      <mat-card-header>
+        <mat-card-title>{{ product.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p><i>{{ product.description }}</i></p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Modal for enlarged image -->
+  <div [ngClass]="{'modal': true, 'open': isModalOpen}" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button mat-icon-button class="close-btn" (click)="closeModal()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <button mat-icon-button disabled *ngIf="getModalImageCount() == 1">
+        <mat-icon></mat-icon>
+      </button>
+      <button mat-icon-button *ngIf="getModalImageCount() > 1" class="carousel-nav-modal prev"
+        (click)="showPreviousImageInModal()">
         <mat-icon>arrow_back_ios</mat-icon>
       </button>
-
-      <button *ngIf="product.images.length > 1" mat-icon-button class="carousel-nav next"
-        (click)="showNextImage(product)">
+      <img loading="lazy" [src]="enlargedImage" alt="Enlarged Image" class="enlarged-image" />
+      <button mat-icon-button *ngIf="getModalImageCount() > 1" class="carousel-nav-modal next"
+        (click)="showNextImageInModal()">
         <mat-icon>arrow_forward_ios</mat-icon>
       </button>
-
-      <!-- Add (click)="enlargeImage(product.images[product.currentImageIndex])" to enlarge the image -->
-      <img class="image" [src]="product.images[product.currentImageIndex]" [alt]="product.name" loading="lazy"
-      (error)="onImageError($event)" (click)="enlargeImage(product, product.currentImageIndex)" />    
-
-      <!-- Image count displayed below the image -->
-      <p class="image-count">
-        {{ product.currentImageIndex + 1 }} van {{ product.images.length }}
-      </p>
+      <button mat-icon-button disabled *ngIf="getModalImageCount() == 1">
+        <mat-icon></mat-icon>
+      </button>
     </div>
-    <mat-card-header>
-      <mat-card-title>{{ product.name }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p><i>{{ product.description }}</i></p>
-    </mat-card-content>
-  </mat-card>
-</div>
-
-<!-- Modal for enlarged image -->
-<div [ngClass]="{'modal': true, 'open': isModalOpen}" (click)="closeModal()">
-  <div class="modal-content" (click)="$event.stopPropagation()">
-    <button mat-icon-button class="close-btn" (click)="closeModal()">
-      <mat-icon>close</mat-icon>
-    </button>
-    <button mat-icon-button disabled *ngIf="getModalImageCount() == 1">
-      <mat-icon></mat-icon>
-    </button>
-    <button mat-icon-button *ngIf="getModalImageCount() > 1" class="carousel-nav-modal prev" (click)="showPreviousImageInModal()">
-      <mat-icon>arrow_back_ios</mat-icon>
-    </button>
-    <img loading="lazy" [src]="enlargedImage" alt="Enlarged Image" class="enlarged-image" />
-    <button mat-icon-button *ngIf="getModalImageCount() > 1" class="carousel-nav-modal next" (click)="showNextImageInModal()">
-      <mat-icon>arrow_forward_ios</mat-icon>
-    </button>
-    <button mat-icon-button disabled *ngIf="getModalImageCount() == 1">
-      <mat-icon></mat-icon>
-    </button>
   </div>
+
 </div>
